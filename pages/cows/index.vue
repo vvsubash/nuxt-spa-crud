@@ -1,9 +1,11 @@
 <template>
   <div>
-      <ul v-for="cow in cows" v-bind:key="cow.name">
-          {{cow.name}}
-      </ul>
-      {{cows}}
+    <ul v-for="cow in cows" v-bind:key="cow.name">
+      <p>
+        <router-link :to="'/cows/' + cow.name">{{ cow.name }}</router-link>
+        </p>
+    </ul>
+    {{cows}}
   </div>
 </template>
 
@@ -16,7 +18,8 @@ export default {
     };
   },
   firestore: {
-    cows: db.collection("users/x/cows").doc("padda").collection('heatData')
+    cows: db
+      .collection("users/x/cows")
   }
 };
 </script>
