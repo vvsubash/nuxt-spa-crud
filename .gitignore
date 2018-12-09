@@ -22,3 +22,7 @@ jspm_packages/
 
 # nuxt build directory
 .nuxt
+
+
+#dist
+dist/
