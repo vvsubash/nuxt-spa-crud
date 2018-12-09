@@ -1,7 +1,7 @@
 <template>
   <div>
     <!-- <ul v-for="cow in cows" v-bind:key="cow.name">{{cow.name}}</ul> -->
-    {{cows}}
+    {{cow}}
   </div>
 </template>
 
@@ -10,23 +10,15 @@ import db from "~/plugins/firebase.js";
 export default {
   data() {
     return {
-      cows: null
+      cow: null,
+      name: null
     };
   },
-  computed: {
-    name() {
-      return this.$route.params.name
+  firestore() {
+    return {
+      cow : db.collection("users/x/cows").doc(this.$route.params.name)
+
     }
-  },
-  firestore: {
-    cows : db
-      .collection('users/x/cows/'+name+'/heatData')
-  },
-  created() {
-    name = this.$route.params.name
   }
 };
 </script>
-
-<style scoped>
-</style>
