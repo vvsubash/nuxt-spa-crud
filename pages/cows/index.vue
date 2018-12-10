@@ -12,6 +12,7 @@
 <script>
 import db from "~/plugins/firebase.js";
 export default {
+  transition: 'bounce',
   data() {
     return {
       cows: null

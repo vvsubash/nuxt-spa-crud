@@ -36,7 +36,8 @@ module.exports = {
   ** Global CSS
   */
   css: [
-    '~/assets/css/tailwind.css'
+    '~/assets/css/tailwind.css',
+    '~/assets/css/main.css'
   ],
 
   /*
@@ -55,6 +56,7 @@ module.exports = {
   ** Build configuration
   */
  build: {
+  //  analyze: true,
   extractCSS: true,
   postcss: {
     plugins: {
