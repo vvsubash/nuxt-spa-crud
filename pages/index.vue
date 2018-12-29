@@ -9,7 +9,7 @@
         My posh Nuxt.js project
       </h2>
       <div class="links">
-        <a>    <nuxt-link to="/cows">Cows</nuxt-link>
+        <a>    <nuxt-link rel="prerender" to="/cows">Cows</nuxt-link>
 </a>
       </div>
     </div>
