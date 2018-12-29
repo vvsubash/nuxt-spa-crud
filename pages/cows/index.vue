@@ -80,7 +80,7 @@
             >
             <div class="text-sm">
               <p class="text-black leading-none">
-                <router-link rel="prerender" :to="'/cows/' + cow.name">{{ cow.name }}</router-link>
+                <router-link rel="preload" :to="'/cows/' + cow.name">{{ cow.name }}</router-link>
               </p>
               <p class="text-grey-dark">Aug 18</p>
             </div>
