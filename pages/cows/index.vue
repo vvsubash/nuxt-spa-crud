@@ -3,7 +3,7 @@
     <div class="max-w-md w-full lg:flex">
       <div
         class="h-48 lg:h-auto lg:w-48 flex-none bg-cover rounded-t lg:rounded-t-none lg:rounded-l text-center overflow-hidden"
-        style="background-image: url('https://tailwindcss.com/img/card-left.jpg')"
+        style="background-image: url('https://res.cloudinary.com/dla6p0kbo/image/upload/f_auto,q_auto:low/v1539050513/samples/ecommerce/leather-bag-gray.jpg')"
         title="Woman holding a mug"
       ></div>
       <div
@@ -48,7 +48,7 @@
       <div class="max-w-md w-full lg:flex">
         <div
           class="h-48 lg:h-auto lg:w-48 flex-none bg-cover rounded-t lg:rounded-t-none lg:rounded-l text-center overflow-hidden"
-          style="background-image: url('https://res.cloudinary.com/demo/image/upload/q_auto/woman.jpg')"
+          style="background-image: url('https://res.cloudinary.com/dla6p0kbo/image/upload/f_auto,q_auto:low/v1539050513/samples/ecommerce/leather-bag-gray.jpg')"
           title="Woman holding a mug"
         ></div>
         <div
@@ -92,18 +92,18 @@
 </template>
 
 <script>
-import db from "~/plugins/firebase.js";
-export default {
-  transition: "bounce",
-  data() {
-    return {
-      cows: null
-    };
-  },
-  firestore: {
-    cows: db.collection("users/x/cows")
-  }
-};
+  import db from "~/plugins/firebase.js";
+  export default {
+    transition: "bounce",
+    data() {
+      return {
+        cows: null
+      };
+    },
+    firestore: {
+      cows: db.collection("users/x/cows")
+    }
+  };
 </script>
 
 <style scoped>
