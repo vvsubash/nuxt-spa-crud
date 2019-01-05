@@ -27,3 +27,7 @@ jspm_packages/
 
 #dist
 dist/
+
+
+.firebase/
+.firestore/
