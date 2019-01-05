@@ -10,12 +10,12 @@ pids
 *.pid
 *.seed
 *.pid.lock
-
+*.firebase
 
 # Dependency directories
 node_modules/
 jspm_packages/
-dist/
+
 
 
 # Optional npm cache directory
