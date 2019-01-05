@@ -48,7 +48,7 @@
       <div class="max-w-md w-full lg:flex">
         <div
           class="h-48 lg:h-auto lg:w-48 flex-none bg-cover rounded-t lg:rounded-t-none lg:rounded-l text-center overflow-hidden"
-          style="background-image: url('https://tailwindcss.com/img/card-left.jpg')"
+          style="background-image: url('https://res.cloudinary.com/demo/image/upload/q_auto/woman.jpg')"
           title="Woman holding a mug"
         ></div>
         <div
