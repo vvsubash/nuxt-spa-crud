@@ -11,7 +11,7 @@ pids
 *.seed
 *.pid.lock
 *.firebase
-
+.firebase/
 # Dependency directories
 node_modules/
 jspm_packages/
