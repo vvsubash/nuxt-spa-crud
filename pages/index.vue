@@ -1,5 +1,5 @@
 <template>
-  <section class="container">
+  <section class>
     <div>
       <logo/>
       <h1 class="title">nuxt-spa-tailwind-crud</h1>
