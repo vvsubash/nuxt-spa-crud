@@ -2,11 +2,18 @@
   <div class>
     <h1 class="mt-8 text-green-dark">Form to add cow to database</h1>
 
-
     <form @submit.prevent="addCow">
-      <input v-model="name" placeholder="Name of cow">
-      <input v-model="isMilking" placeholder="true">
-      <button type="submit">Add New Cow</button>
+      <fieldset>
+        <input v-model="name" placeholder="Name of cow">
+      </fieldset>
+      <br>
+      <fieldset>
+        <input v-model="isMilking" placeholder="true">
+      </fieldset>
+      <br>
+      <fieldset>
+        <button type="submit">Add New Cow</button>
+      </fieldset>
     </form>
   </div>
 </template>
