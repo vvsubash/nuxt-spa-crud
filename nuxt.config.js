@@ -38,10 +38,10 @@ module.exports = {
         type: 'image/x-icon',
         href: '/favicon.ico'
       },
-      {
-        rel: 'stylesheet',
-        href: 'https://cdn.rawgit.com/kimeiga/bahunya/css/bahunya-0.1.2.css'
-      }
+      // {
+      //   rel: 'stylesheet',
+      //   href: 'https://cdn.rawgit.com/kimeiga/bahunya/css/bahunya-0.1.2.css'
+      // }
     ]
   },
 

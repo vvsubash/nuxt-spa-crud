@@ -1,20 +1,11 @@
 <template>
-  <div class>
-    <h1 class="mt-8 text-green-dark">Form to add cow to database</h1>
-
-    <form @submit.prevent="addCow">
-      <fieldset>
-        <input v-model="name" placeholder="Name of cow">
-      </fieldset>
-      <br>
-      <fieldset>
-        <input v-model="isMilking" placeholder="true">
-      </fieldset>
-      <br>
-      <fieldset>
-        <button type="submit">Add New Cow</button>
-      </fieldset>
-    </form>
+  <div class="bg-grey-lighter p-8 m-8 mx-auto container">
+    <div class>
+      <h1 class>This is a form</h1>
+    </div>
+    <div class="my-4 py-4">
+      <input class="rr" type="text" placeholder="Name">
+    </div>
   </div>
 </template>
 
@@ -46,4 +37,20 @@ export default {
 </script>
 
 <style scoped>
+.rr {
+  @apply border-2;
+  @apply rounded-lg;
+  @apply h-12;
+  @apply w-full;
+}
+
+.rr:focus {
+  @apply outline-none;
+}
+.rr::placeholder {
+  color: green;
+  background-color: white;
+  padding: 10px;
+  @apply font-bold;
+}
 </style>
