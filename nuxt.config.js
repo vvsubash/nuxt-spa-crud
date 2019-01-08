@@ -34,10 +34,15 @@ module.exports = {
       }
     ],
     link: [{
-      rel: 'icon',
-      type: 'image/x-icon',
-      href: '/favicon.ico'
-    }]
+        rel: 'icon',
+        type: 'image/x-icon',
+        href: '/favicon.ico'
+      },
+      {
+        rel: 'stylesheet',
+        href: 'https://cdn.rawgit.com/kimeiga/bahunya/css/bahunya-0.1.2.css'
+      }
+    ]
   },
 
   /*
