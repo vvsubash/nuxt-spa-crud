@@ -82,18 +82,18 @@
 </template>
 
 <script>
-  import db from "~/plugins/firebase.js";
-  export default {
-    transition: "bounce",
-    data() {
-      return {
-        cows: null
-      };
-    },
-    firestore: {
-      cows: db.collection("users/x/cows")
-    }
-  };
+import db from "~/plugins/firestore.js";
+export default {
+  transition: "bounce",
+  data() {
+    return {
+      cows: null
+    };
+  },
+  firestore: {
+    cows: db.collection("users/x/cows")
+  }
+};
 </script>
 
 <style scoped>

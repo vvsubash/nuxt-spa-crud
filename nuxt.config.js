@@ -32,16 +32,6 @@ module.exports = {
         name: 'description',
         content: pkg.description
       }
-    ],
-    link: [{
-        rel: 'icon',
-        type: 'image/x-icon',
-        href: '/favicon.ico'
-      },
-      // {
-      //   rel: 'stylesheet',
-      //   href: 'https://cdn.rawgit.com/kimeiga/bahunya/css/bahunya-0.1.2.css'
-      // }
     ]
   },
 
@@ -63,7 +53,7 @@ module.exports = {
   /*
    ** Plugins to load before mounting the App
    */
-  plugins: ['~/plugins/firebase.js'],
+  plugins: ['~/plugins/firestore.js'],
 
   /*
    ** Nuxt.js modules
