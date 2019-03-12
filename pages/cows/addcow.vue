@@ -4,7 +4,8 @@
       <h1 class>This is a form</h1>
     </div>
     <div class="my-4 py-4">
-      <input class="rr" type="text" placeholder="Name">
+      <input class="rr" v-model="name" type="text" placeholder="Name">
+      <button @click="addCow">submit</button>
     </div>
   </div>
 </template>
