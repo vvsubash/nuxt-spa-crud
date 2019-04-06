@@ -18,11 +18,10 @@ module.exports = {
    ** Headers of the page
    */
   head: {
-    script: [
-      { src: 'https://apis.google.com/js/platform.js',
-        async: true
-      }
-    ],
+    script: [{
+      src: 'https://apis.google.com/js/platform.js',
+      async: true
+    }],
     htmlAttrs: {
       lang: 'en',
     },
