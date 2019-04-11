@@ -1,9 +1,11 @@
 import Vue from "vue";
 import firebase from "firebase/app";
 import "firebase/firestore";
-import vuefire from "vuefire";
+import {
+  firestorePlugin
+} from "vuefire";
 
-Vue.use(vuefire);
+Vue.use(firestorePlugin);
 
 var firebaseApp = firebase.initializeApp({
   apiKey: "AIzaSyASmCb-ocsqqiuEWu99DbJChEVhHgSkZhk",
@@ -20,7 +22,7 @@ db.settings({
 firebase
   .firestore()
   .enablePersistence()
-  .catch(function(err) {
+  .catch(function (err) {
     if (err.code == "failed-precondition") {
       // Multiple tabs open, persistence can only be enabled
       // in one tab at a a time.
