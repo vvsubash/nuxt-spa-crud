@@ -12,6 +12,12 @@ class TailwindExtractor {
 module.exports = {
   mode: 'spa',
 
+
+  generate: {
+    routes: [
+      '/cows/grey',
+    ]
+  },
   /*
    ** Headers of the page
    */
