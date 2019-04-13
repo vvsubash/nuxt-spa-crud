@@ -16,7 +16,7 @@ pids
 node_modules/
 jspm_packages/
 
-
+package-lock.json
 
 # Optional npm cache directory
 .npm
@@ -31,3 +31,5 @@ dist/
 
 .firebase/
 .firestore/
+dist/.nojekyll
+dist/README.md

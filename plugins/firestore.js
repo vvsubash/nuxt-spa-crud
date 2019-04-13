@@ -15,9 +15,6 @@ var firebaseApp = firebase.initializeApp({
 
 const db = firebaseApp.firestore();
 
-db.settings({
-  timestampsInSnapshots: true
-});
 
 firebase
   .firestore()

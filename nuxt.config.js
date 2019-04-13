@@ -11,7 +11,9 @@ class TailwindExtractor {
 
 module.exports = {
   mode: 'spa',
-
+  // router: {
+  //   linkPrefetchedClass: 'nuxt-link-prefetched'
+  // },
 
   generate: {
     routes: [
@@ -22,12 +24,24 @@ module.exports = {
    ** Headers of the page
    */
   head: {
+    script: [{
+      src: 'https://apis.google.com/js/platform.js',
+      async: true
+    }],
     htmlAttrs: {
       lang: 'en',
     },
     title: pkg.name,
     meta: [{
         charset: 'utf-8'
+      },
+      {
+        name: 'google-signin-client_id',
+        content: '895306081831-gt8b028u21adrg57gak49ct4rse634h2.apps.googleusercontent.com'
+      },
+      {
+        name: 'google-site-verification',
+        content: 'QPuwvLtwJxWPtw1ju3EJU-qU3vNW8aDwkk6NKEYd_NA'
       },
       {
         name: 'viewport',
@@ -38,12 +52,7 @@ module.exports = {
         name: 'description',
         content: pkg.description
       }
-    ],
-    link: [{
-      rel: 'icon',
-      type: 'image/x-icon',
-      href: '/favicon.ico'
-    }]
+    ]
   },
 
   /*
@@ -64,13 +73,15 @@ module.exports = {
   /*
    ** Plugins to load before mounting the App
    */
-  plugins: ['~/plugins/firebase.js'],
+  plugins: ['~/plugins/firestore.js'],
 
   /*
    ** Nuxt.js modules
    */
   modules: [
-    '@nuxtjs/sitemap'
+    '@nuxtjs/sitemap',
+    '@nuxtjs/pwa',
+
   ],
 
   /*

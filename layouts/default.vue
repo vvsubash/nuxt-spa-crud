@@ -1,8 +1,11 @@
 <template>
   <div class="mx-auto container">
-    <nuxt />
+    <nuxt/>
   </div>
 </template>
 
 <style>
+body {
+  font-family: 'Roboto'
+}
 </style>

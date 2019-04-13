@@ -3,6 +3,8 @@
     <div class="max-w-md w-full lg:flex">
       <div
         class="h-48 lg:h-auto lg:w-48 flex-none bg-cover rounded-t lg:rounded-t-none lg:rounded-l text-center overflow-hidden"
+        style="background-image: url('https://picsum.photos/200/300
+ç')"
         style="background-image: url('https://picsum.photos/200/300')"
         title="Woman holding a mug"
       ></div>
@@ -40,6 +42,8 @@
       <div class="max-w-md w-full lg:flex">
         <div
           class="h-48 lg:h-auto lg:w-48 flex-none bg-cover rounded-t lg:rounded-t-none lg:rounded-l text-center overflow-hidden"
+          style="background-image: url('https://picsum.photos/200/300
+')"
           style="background-image: url('https://picsum.photos/200/300')"
           title="Woman holding a mug"
         ></div>
@@ -76,18 +80,18 @@
 </template>
 
 <script>
-  import db from "~/plugins/firebase.js";
-  export default {
-    transition: "bounce",
-    data() {
-      return {
-        cows: null
-      };
-    },
-    firestore: {
-      cows: db.collection("users/x/cows")
-    }
-  };
+import db from "~/plugins/firestore.js";
+export default {
+  transition: "bounce",
+  data() {
+    return {
+      cows: null
+    };
+  },
+  firestore: {
+    cows: db.collection("users/x/cows")
+  }
+};
 </script>
 
 <style scoped>
