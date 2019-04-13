@@ -73,7 +73,9 @@ module.exports = {
    ** Nuxt.js modules
    */
   modules: [
-    '@nuxtjs/sitemap'
+    '@nuxtjs/sitemap',
+    '@nuxtjs/pwa',
+
   ],
 
   /*
