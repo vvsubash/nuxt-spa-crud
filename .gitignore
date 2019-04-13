@@ -31,3 +31,5 @@ dist/
 
 .firebase/
 .firestore/
+dist/.nojekyll
+dist/README.md
