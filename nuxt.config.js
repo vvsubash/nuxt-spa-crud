@@ -14,6 +14,12 @@ module.exports = {
   // router: {
   //   linkPrefetchedClass: 'nuxt-link-prefetched'
   // },
+
+  generate: {
+    routes: [
+      '/cows/grey',
+    ]
+  },
   /*
    ** Headers of the page
    */
