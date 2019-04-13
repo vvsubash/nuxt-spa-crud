@@ -65,8 +65,11 @@ module.exports = {
   modules: [
     '@nuxtjs/sitemap',
     '@nuxtjs/pwa',
-
   ],
+  manifest: {
+    name: 'My Awesome App',
+    lang: 'fa'
+  },
 
   /*
    ** Build configuration
