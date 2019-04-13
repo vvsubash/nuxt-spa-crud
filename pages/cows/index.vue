@@ -36,7 +36,9 @@
 			</div>
 		</div>
 
-		<ul v-for="cow in cows" v-bind:key="cow.name">{{cow.name}}</ul>
+		<ul v-for="cow in cows" v-bind:key="cow.name">
+			<router-link :to="'/cows/' + cow.name">{{ cow.name }}</router-link>
+		</ul>
 	</div>
 </template>
 
