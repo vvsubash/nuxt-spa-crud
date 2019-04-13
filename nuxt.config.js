@@ -15,33 +15,17 @@ module.exports = {
   //   linkPrefetchedClass: 'nuxt-link-prefetched'
   // },
 
-  generate: {
-    routes: [
-      '/cows/grey',
-    ]
-  },
   /*
    ** Headers of the page
    */
   head: {
-    script: [{
-      src: 'https://apis.google.com/js/platform.js',
-      async: true
-    }],
+    script: [],
     htmlAttrs: {
       lang: 'en',
     },
     title: pkg.name,
     meta: [{
         charset: 'utf-8'
-      },
-      {
-        name: 'google-signin-client_id',
-        content: '895306081831-gt8b028u21adrg57gak49ct4rse634h2.apps.googleusercontent.com'
-      },
-      {
-        name: 'google-site-verification',
-        content: 'QPuwvLtwJxWPtw1ju3EJU-qU3vNW8aDwkk6NKEYd_NA'
       },
       {
         name: 'viewport',
