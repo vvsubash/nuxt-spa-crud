@@ -65,7 +65,16 @@ module.exports = {
   modules: [
     '@nuxtjs/sitemap',
     '@nuxtjs/pwa',
+    '@nuxtjs/axios',
+    '@nuxtjs/auth',
   ],
+  auth: {
+    strategies: {
+      google: {
+        client_id: '895306081831-gt8b028u21adrg57gak49ct4rse634h2.apps.googleusercontent.com'
+      },
+    }
+  },
   manifest: {
     name: 'My Awesome App',
     lang: 'fa'
