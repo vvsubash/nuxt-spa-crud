@@ -5,6 +5,9 @@
 <script>
 import db from "~/plugins/firestore.js";
 export default {
+	validate({ params, store }) {
+		return params.sub == store.state.auth.user.sub;
+	},
 	transition: "bounce",
 	data() {
 		return {
