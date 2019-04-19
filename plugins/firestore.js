@@ -1,4 +1,4 @@
-import Vue from "vue";
+import Vue from 'vue'
 import firebase from "firebase/app";
 import "firebase/firestore";
 import {
