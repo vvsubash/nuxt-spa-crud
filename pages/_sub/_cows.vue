@@ -1,29 +1,49 @@
 <template>
-	<div>{{cows}}</div>
+  <div>
+    <p>{{cows}}</p>
+    <br>
+    <input type="text" v-model="ncow">
+    <input type="button" @click="ac">
+  </div>
 </template>
 
 <script>
 import db from "~/plugins/firestore.js";
 export default {
-	validate({ params, store }) {
-		return params.sub == store.state.auth.user.sub;
-	},
-	transition: "bounce",
-	data() {
-		return {
-			cows: [],
-			y: "x"
-		};
-	},
-	firestore() {
-		const uid = this.$auth.user.sub;
-		return {
-			cows: db
-				.collection("users")
-				.doc(uid)
-				.collection("cows")
-		};
-	}
+  validate({ params, store }) {
+    return params.sub == store.state.auth.user.sub;
+  },
+  transition: "bounce",
+  data() {
+    return {
+      cows: [],
+      y: "x",
+      ncow: null
+    };
+  },
+  firestore() {
+    const uid = this.$auth.user.sub;
+    return {
+      cows: db
+        .collection("users")
+        .doc(uid)
+        .collection("cows")
+    };
+  },
+  methods: {
+    ac() {
+      db.collection("users")
+        .doc(this.$auth.user.sub)
+        .collection("cows")
+        .doc(this.ncow)
+        .set({
+          name: this.ncow
+        })
+        .then(() => {
+          console.log("user updated!");
+        });
+    }
+  }
 };
 </script>
 
