@@ -3,7 +3,9 @@
     <p>{{cows}}</p>
     <br>
     <input type="text" v-model="ncow">
-    <input type="button" @click="ac">
+    <div class="border-2">
+      <input type="button" @click="ac" class="h-12 w-32">
+    </div>
   </div>
 </template>
 
