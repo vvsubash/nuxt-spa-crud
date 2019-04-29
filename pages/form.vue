@@ -11,6 +11,8 @@
   </div>
 </template>
 <script>
+import db from "~/plugins/firestore.js";
+
 export default {
   data() {
     return {};

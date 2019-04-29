@@ -71,6 +71,9 @@ module.exports = {
   auth: {
     strategies: {
       google: {
+        response_type: 'token',
+        token_type: 'Bearer',
+        scope: ['openid', 'profile', 'email'],
         client_id: '895306081831-gt8b028u21adrg57gak49ct4rse634h2.apps.googleusercontent.com'
       },
     },

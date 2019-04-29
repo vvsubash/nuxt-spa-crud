@@ -2,10 +2,12 @@
   <div>
     <p>{{cows}}</p>
     <br>
-    <input type="text" v-model="ncow">
-    <div class="border-2">
-      <input type="button" @click="ac" class="h-12 w-32">
-    </div>
+    <input type="text" v-model="ncow" class="border-teal-darer select-none border">
+    <button
+      type="submit"
+      @click.prevent="ac"
+      class="bg-transparent hover:bg-red text-red font-semibold hover:text-white py-2 px-4 border border-red-lighter hover:border-transparent rounded"
+    >Submit</button>
   </div>
 </template>
 
