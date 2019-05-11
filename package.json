@@ -13,6 +13,7 @@
   "dependencies": {
     "@nuxtjs/auth": "^4.5.3",
     "@nuxtjs/axios": "^5.4.1",
+    "@nuxtjs/google-analytics": "^2.2.0",
     "@nuxtjs/pwa": "^3.0.0-beta.14",
     "@nuxtjs/sitemap": "^0.2.2",
     "cross-env": "^5.2.0",

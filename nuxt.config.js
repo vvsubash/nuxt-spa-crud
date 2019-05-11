@@ -67,6 +67,8 @@ module.exports = {
     '@nuxtjs/pwa',
     '@nuxtjs/axios',
     '@nuxtjs/auth',
+    '@nuxtjs/google-analytics'
+
   ],
   auth: {
     strategies: {
@@ -80,6 +82,9 @@ module.exports = {
     redirect: {
       callback: '/form',
     }
+  },
+  googleAnalytics: {
+    id: 'UA-139968686-1'
   },
   manifest: {
     name: 'My Awesome App',
