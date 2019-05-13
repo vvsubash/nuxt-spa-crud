@@ -11,7 +11,7 @@
       <h2>{{cow.name}}</h2>
       <button
         type="submit"
-        @click.prevent="deleteCow"
+        @click.prevent="deleteCow(pet)"
         class="bg-transparent hover:bg-red text-red font-semibold hover:text-white py-2 px-4 border border-red-lighter hover:border-transparent rounded"
       >Delete</button>
     </div>
@@ -54,8 +54,9 @@ export default {
           console.log("cow added!");
         });
     },
-    deleteCow: function() {
-      return alert(this.cow.name);
+    deleteCow: function(cow) {
+      const index = this.cows.key;
+      return alert(index);
     }
   }
 };
