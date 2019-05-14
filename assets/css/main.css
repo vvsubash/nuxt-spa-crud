@@ -1,44 +1,60 @@
-.page-enter-active, .page-leave-active {
-    transition: opacity 20s
-  }
-  .page-enter, .page-leave-active {
-    opacity: 10
-  }
-  
-  .bounce-enter-active {
-    animation: bounce-in 2s;
-  }
-  .bounce-leave-active {
-    animation: bounce-out 2s;
-  }
-  @keyframes bounce-in {
-    0% { transform: scale(0) }
-    50% { transform: scale(1.5) }
-    100% { transform: scale(1) }
-  }
-  @keyframes bounce-out {
-    0% { transform: scale(1) }
-    50% { transform: scale(1.5) }
-    100% { transform: scale(0) }
-  }
-  
-  .slide-left-enter,
-  .slide-right-leave-active {
-    opacity: 0;
-    transform: translate(30px, 0);
-  }
-  .slide-left-leave-active,
-  .slide-right-enter {
-    opacity: 0;
-    transform: translate(-30px, 0);
-  }
-  
+.page-enter-active,
+.page-leave-active {
+  transition: opacity 20s;
+}
+.page-enter,
+.page-leave-active {
+  opacity: 10;
+}
 
-  @font-face {
-    font-family: 'Roboto';
-    font-style: normal;
-    font-weight: 400;
-    src: local('Roboto'), local('Roboto-Regular'), url(https://fonts.gstatic.com/s/roboto/v18/KFOmCnqEu92Fr1Mu4mxKKTU1Kg.woff2) format('woff2');
-    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+.bounce-enter-active {
+  animation: bounce-in 20s;
+}
+.bounce-leave-active {
+  animation: bounce-out 20s;
+}
+@keyframes bounce-in {
+  0% {
+    transform: scale(0);
   }
-  
+  50% {
+    transform: scale(1.5);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes bounce-out {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.5);
+  }
+  100% {
+    transform: scale(0);
+  }
+}
+
+.slide-left-enter,
+.slide-right-leave-active {
+  opacity: 0;
+  transform: translate(30px, 0);
+}
+.slide-left-leave-active,
+.slide-right-enter {
+  opacity: 0;
+  transform: translate(-30px, 0);
+}
+
+@font-face {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  src: local("Roboto"), local("Roboto-Regular"),
+    url(https://fonts.gstatic.com/s/roboto/v18/KFOmCnqEu92Fr1Mu4mxKKTU1Kg.woff2)
+      format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
+    U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215,
+    U+FEFF, U+FFFD;
+}
