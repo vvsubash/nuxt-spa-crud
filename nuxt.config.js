@@ -11,9 +11,7 @@ class TailwindExtractor {
 
 module.exports = {
   mode: 'spa',
-  router: {
-    linkPrefetchedClass: 'nuxt-link-prefetched'
-  },
+
 
   /*
    ** Headers of the page
