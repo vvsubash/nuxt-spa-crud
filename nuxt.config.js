@@ -61,7 +61,8 @@ module.exports = {
     "@nuxtjs/pwa",
     "@nuxtjs/axios",
     "@nuxtjs/auth",
-    "@nuxtjs/google-analytics"
+    "@nuxtjs/google-analytics",
+    "@bazzite/nuxt-netlify"
   ],
   auth: {
     strategies: {
@@ -83,6 +84,15 @@ module.exports = {
   manifest: {
     name: "My Awesome App",
     lang: "fa"
+  },
+  netlify: {
+    redirects: [
+      {
+        from: "/*",
+        to: "/index.html",
+        status: 200
+      }
+    ]
   },
 
   /*
