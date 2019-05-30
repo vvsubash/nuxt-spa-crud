@@ -1,5 +1,5 @@
 <template>
-  <div @click.enter="addCow">
+  <div>
     <input type="text" v-model="ncow" class="border-teal-darer select-none border">
     <button
       type="submit"
