@@ -1,19 +1,19 @@
 <template>
-  <div @click.enter="addCow">
-    <input type="text" v-model="ncow" class="border-teal-darer select-none border">
+  <div @keyup.enter="addCow">
+    <input type="text" v-model="ncow" class="border-teal-darer select-none border" />
     <button
       type="submit"
       @click.prevent="addCow"
       class="bg-transparent hover:bg-red text-red font-semibold hover:text-white py-2 px-4 border border-red-lighter hover:border-transparent rounded"
     >Submit</button>
-    <br>
-    <div v-for="cow in cows" :key="cow.name" class="flex justify-start">
-      <h2>{{cow.name}}</h2>
+    <br />
+    <div v-for="cow in cows" :key="cow.name" class="flex justify-around">
+      <h2 class="p-4">{{cow.name}}</h2>
       <button
         type="submit"
-        @click.prevent="deleteCow(cow)"
+        @click.prevent="deleteCow(cow.name)"
         class="bg-transparent hover:bg-red text-red font-semibold hover:text-white py-2 px-4 border border-red-lighter hover:border-transparent rounded"
-      >Delete</button>
+      >Delete + {{cow.name}}</button>
     </div>
   </div>
 </template>
@@ -57,9 +57,8 @@ export default {
           console.log("cow added!");
         });
     },
-    deleteCow: function(cow) {
-      const index = this.cows.key;
-      return alert(index);
+    deleteCow: function(name) {
+      console.log(name);
     }
   }
 };

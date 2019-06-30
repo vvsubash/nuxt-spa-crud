@@ -1,9 +1,10 @@
 <template>
   <div>
     <button @click="signIn">login</button>
-    <br>
-    {{this.$auth.user}}
-    <br>
+    <br />
+    {{Object.keys(this.$auth)}}
+    {{this.$auth.token}}
+    <br />
     <div v-if="this.$auth.loggedIn">
       <router-link :to="'/'+ this.$auth.user.sub +'/cows'">LinkTitle</router-link>
       <button class="mx-auto bg-blue" @click="signOut">Signout</button>
@@ -12,7 +13,6 @@
 </template>
 <script>
 import db from "~/plugins/firestore.js";
-import auth from "~/plugins/firebaseAuth.js";
 
 export default {
   data() {
