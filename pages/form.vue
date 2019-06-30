@@ -6,12 +6,13 @@
     <br>
     <div v-if="this.$auth.loggedIn">
       <router-link :to="'/'+ this.$auth.user.sub +'/cows'">LinkTitle</router-link>
-      <button @click="signOut">Signout</button>
+      <button class="mx-auto bg-blue" @click="signOut">Signout</button>
     </div>
   </div>
 </template>
 <script>
 import db from "~/plugins/firestore.js";
+import auth from "~/plugins/firebaseAuth.js";
 
 export default {
   data() {
@@ -19,7 +20,23 @@ export default {
   },
   methods: {
     signIn() {
-      this.$auth.loginWith("google");
+      this.$auth
+        .loginWith("google")
+        .then(result => {
+          prompt(result.user.sub);
+          // firebase
+          //   .auth()
+          //   .signInWithCustomToken(token)
+          //   .catch(function(error) {
+          //     // Handle Errors here.
+          //     var errorCode = error.code;
+          //     var errorMessage = error.message;
+          //     // ...
+          //   });
+        })
+        .catch(err => {
+          console.log(err);
+        });
     },
     signOut() {
       this.$auth.logout();
