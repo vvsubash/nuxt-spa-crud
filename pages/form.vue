@@ -9,6 +9,7 @@
       <router-link :to="'/' + this.$auth.user.sub + '/cows'"
         >LinkTitle</router-link
       >
+      {{ this.$auth.getToken("google") }}
       <button class="mx-auto bg-blue" @click="signOut">Signout</button>
     </div>
   </div>
