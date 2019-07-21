@@ -1,6 +1,7 @@
-<template>
+<template> 
   <div @keyup.enter="addCow">
     <input type="text" v-model="ncow" class="border-teal-darer select-none border" />
+  <div>
     <button
       type="submit"
       @click.prevent="addCow"

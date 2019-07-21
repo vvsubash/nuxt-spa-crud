@@ -76,7 +76,8 @@ module.exports = {
       }
     },
     redirect: {
-      callback: "/form"
+      callback: "/form",
+      home: "/form"
     }
   },
   googleAnalytics: {
