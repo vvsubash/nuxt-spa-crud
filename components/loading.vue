@@ -11,13 +11,13 @@ export default {
   }),
   methods: {
     start() {
-      this.loading = true
+      this.loading = true;
     },
     finish() {
-      this.loading = false
+      this.loading = false;
     }
   }
-}
+};
 </script>
 
 <style scoped>
@@ -27,7 +27,7 @@ export default {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(255, 255, 255, 0.8);
+  background: greenyellow;
   text-align: center;
   padding-top: 200px;
   font-size: 30px;
