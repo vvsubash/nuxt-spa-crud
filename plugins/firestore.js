@@ -12,12 +12,12 @@ var firebaseApp = firebase.initializeApp({
   projectId: "samp-96c4e",
   storageBucket: "samp-96c4e.appspot.com",
   messagingSenderId: "895306081831",
-  appId: "1:895306081831:web:128d5f5899e80d40",
+  appId: "1:895306081831:web:128d5f5899e80d40"
 
-  clientId:
-    "895306081831-gt8b028u21adrg57gak49ct4rse634h2.apps.googleusercontent.com",
+  // clientId:
+  //   "895306081831-gt8b028u21adrg57gak49ct4rse634h2.apps.googleusercontent.com",
 
-  scopes: ["email", "profile"]
+  // scopes: ["email", "profile"]
 });
 
 const db = firebaseApp.firestore();
