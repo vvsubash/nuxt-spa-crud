@@ -1,22 +1,12 @@
 <template>
   <div>
     <button @click="signIn">login</button>
-    <br />
-    {{ Object.keys(this.$auth) }}
-    {{ this.$auth.token }}
-    <br />
-    <div v-if="this.$auth.loggedIn">
-      <router-link :to="'/' + this.$auth.user.sub + '/cows'"
-        >LinkTitle</router-link
-      >
-      {{ this.$auth.getToken("google") }}
-      <button class="mx-auto bg-blue" @click="signOut">Signout</button>
-    </div>
+    {{ this.$auth.getToken("google") }}
   </div>
 </template>
 <script>
 import db from "~/plugins/firestore.js";
-
+import firebase from "firebase";
 export default {
   data() {
     return {};

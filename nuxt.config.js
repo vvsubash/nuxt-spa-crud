@@ -61,15 +61,12 @@ module.exports = {
     "@nuxtjs/pwa",
     "@nuxtjs/axios",
     "@nuxtjs/auth",
-    "@nuxtjs/google-analytics",
     "@bazzite/nuxt-netlify"
   ],
   auth: {
     strategies: {
       google: {
-        response_type: "token",
-        token_type: "Bearer",
-        scope: ["openid", "profile", "email"],
+        token_key: "id_token",
         client_id:
           "895306081831-gt8b028u21adrg57gak49ct4rse634h2.apps.googleusercontent.com"
       }
@@ -77,9 +74,6 @@ module.exports = {
     redirect: {
       callback: "/form"
     }
-  },
-  googleAnalytics: {
-    id: "UA-139968686-1"
   },
   manifest: {
     name: "My Awesome App",
